@@ -14,5 +14,16 @@ NOTES:
 */
 
 int findSingleOccurenceNumber(int *A, int len) {
-	return -1;
+	int c;
+	if (A == nullptr)
+		return -1;
+	for (int i = 0; i < len; i++){
+		c = 0;
+		for (int j = 0; j < len; j++){
+			if (A[i] == A[j])
+				c++;
+		}
+		if (c == 1)
+			return A[i];
+	}
 }
